@@ -165,9 +165,9 @@ async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 # -------------------- التشغيل --------------------
 
 def main():
-    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    token = os.getenv("TELEGRAM_TOKEN")  # <- هذا هو الاسم الصحيح
     if not token:
-        logger.error("لم يتم العثور على TELEGRAM_BOT_TOKEN!")
+        logger.error("لم يتم العثور على TELEGRAM_TOKEN!")
         return
     
     app = Application.builder().token(token).build()
